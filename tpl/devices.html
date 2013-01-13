@@ -1,0 +1,52 @@
+<li class="dropdown">
+	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="icon-mobile-phone"></i>
+	</a>
+	<ul class="dropdown-menu">
+<% _.each(mobile, function(brand){ %>
+		<li class="li-title"> <span> <%= brand.title %> </span> </li>
+	<% _.each(brand.screens, function(screen){ %>
+		<li> <a class="resize" href="#" data-height="<%= screen.height %>" data-width="<%= screen.width %>"> <%= screen.name %> </a> </li>
+	<% }) %>			
+<% }); %> 
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="icon-tablet"></i>
+	</a>
+	<ul class="dropdown-menu">
+<% _.each(tablet, function(brand){ %>
+		<li class="li-title"> <span> <%= brand.title %> </span> </li>
+	<% _.each(brand.screens, function(screen){ %>
+		<li> <a class="resize" href="#" data-height="<%= screen.height %>" data-width="<%= screen.width %>"> <%= screen.name %> </a> </li>
+	<% }) %>			
+<% }); %> 
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="icon-laptop"></i>
+	</a>
+	<ul class="dropdown-menu">
+<% _.each(notebook, function(brand){ %>
+		<li class="li-title"> <span> <%= brand.title %> </span> </li>
+	<% _.each(brand.screens, function(screen){ %>
+		<li> <a class="resize" href="#" data-height="<%= screen.height %>" data-width="<%= screen.width %>"> <%= screen.name %> </a> </li>
+	<% }) %>			
+<% }); %> 
+	</ul>
+</li>
+<li class="dropdown">
+	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		<i class="icon-desktop"></i>
+	</a>
+	<ul class="dropdown-menu">
+<% _.each(desktop, function(brand){ %>
+		<li class="li-title"> <span> <%= brand.title %> </span> </li>
+	<% _.each(brand.screens, function(screen){ %>
+		<li> <a class="resize" href="#" data-height="<%= screen.height %>" data-width="<%= screen.width %>"> <%= screen.name %> </a> </li>
+	<% }) %>			
+<% }); %> 
+	</ul>
+</li>

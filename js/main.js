@@ -5,7 +5,7 @@ require.config({
 		'underscore': 'libs/lodash',
 		'backbone'	: 'libs/backbone',
 		// Plugins
-		'qq'		: 'plugins/jquery.qq',
+		// 'qq'		: 'plugins/jquery.qq',
 		'scroll'	: 'plugins/jquery.slimscroll',
 		'plugins'	: 'plugins/misc',
 		'jqueryui'	: 'plugins/jquery.ui',
@@ -19,10 +19,10 @@ require.config({
 		// Twitter Bootstrap js files
 		'bootstrap': ['jquery'],
 		// Valums uploader plugin
-		'qq': {
-			'deps': ['underscore', 'jquery'],
-			'exports': 'qq'
-		},
+		// 'qq': {
+		// 	'deps': ['underscore', 'jquery'],
+		// 	'exports': 'qq'
+		// },
 		// jQuery UI
 		'jqueryui': ['jquery'],
 		// SlimScroll plugin
@@ -41,4 +41,6 @@ require([
 	'bootstrap'
 ], function(App) {
 	window.app = App();
+
+	app.initialize();
 });

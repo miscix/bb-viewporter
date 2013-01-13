@@ -30,7 +30,7 @@
 // --------------------------------------------------
 
 .container {
-	width: 600px;
+	// width: 600px;
 }
 
 //
@@ -38,13 +38,28 @@
 // --------------------------------------------------
 
 .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-	width: 600px;
+	// width: 600px;
 }
 
 .navbar .nav > li {
 	&.pull-right {
 		float: right;
 	}
+	.li-title {
+		span {
+			padding: 3px 20px;
+			background: @grayLighter;
+			font-weight: 700;
+			color: @grayDarker;
+			border: 1px solid @tableBorder;
+			border-width: 1px 0;
+			display: block;
+		}
+	}
+}
+
+.navbar input {
+	height: 22px;
 }
 
 // Links

@@ -1,24 +1,19 @@
 define([
 	'jquery',
+	'underscore',
 	'backbone',
-	'collections/fonts',
-	'models/lastfont',
 	'views/screen',
-	'data'
-], function($, Backbone, Fonts, LastFont, Screen, data){
+	'views/porter',
+	'json!data/devices.json'
+], function($, _, Backbone, Screen, Porter, devices){
 	var App = function(){
-		var self = {
-				view	: new Screen(),
-				fonts	: new Fonts(data)
-			};
+		var self = { };
 
-		self.lastfont = new LastFont();
-		
-		self.initialize = function(){ };
+		self.view	= new Screen(self);
+		// self.porter	= new Porter(self);
 
-		// var alert = new Alert();
-		self.log = function(e, txt){
-		// 	alert.render(e, txt);
+		self.initialize = function(){
+			self.view.render(devices);
 		};
 
 		return self;

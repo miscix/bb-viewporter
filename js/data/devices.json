@@ -1,0 +1,284 @@
+{
+	"mobile": [
+		{
+			"title": "Apple",
+			"screens": [
+				{
+					"name": "iPhone",
+					"width": 320,
+					"height": 480
+				}, {
+					"name": "iPhone 4",
+					"width": 640,
+					"height": 960
+				}, {
+					"name": "iPhone 5",
+					"width": 640,
+					"height": 1136
+				}
+			]
+		}, {
+			"title": "BlackBerry",
+			"screens": [
+				{
+					"name": "Torch",
+					"width": 480,
+					"height": 800
+				}, {
+					"name": "Bold Touch 9900",
+					"width": 480,
+					"height": 640
+				}, {
+					"name": "Curve",
+					"width": 360,
+					"height": 480
+				}
+			]
+		}, {
+			"title": "Samsung",
+			"screens": [
+				{
+					"name": "Galaxy S II",
+					"width": 480,
+					"height": 800
+				}, {
+					"name": "Galaxy S III",
+					"width": 720,
+					"height": 1280
+				}, {
+					"name": "Galaxy Note",
+					"width": 720,
+					"height": 1280
+				}
+			]
+		}, {
+			"title": "HTC",
+			"screens": [
+				{
+					"name": "Desire",
+					"width": 320,
+					"height": 533
+				}, {
+					"name": "One X",
+					"width": 360,
+					"height": 640
+				}, {
+					"name": "Touch HD",
+					"width": 480,
+					"height": 800
+				}, {
+					"name": "Sensation",
+					"width": 540,
+					"height": 960
+				}
+			]
+		}, {
+			"title": "LG",
+			"screens": [
+				{
+					"name": "Optimus 3D",
+					"width": 480,
+					"height": 800
+				}, {
+					"name": "Optimus 4X HD",
+					"width": 720,
+					"height": 1280
+				}
+			]
+		}
+	],
+	"tablet": [
+		{
+			"title": "Apple",
+			"screens": [
+				{
+					"name": "iPad Mini",
+					"width": 1024,
+					"height": 768
+				}, {
+					"name": "iPad 2",
+					"width": 1024,
+					"height": 768
+				}, {
+					"name": "iPad 3",
+					"width": 2048,
+					"height": 1536
+				}
+			]
+		}, {
+			"title": "Amazon",
+			"screens": [
+				{
+					"name": "Kindle Fire",
+					"width": 1024,
+					"height": 600
+				}, {
+					"name": "Kindle Fire HD",
+					"width": 1280,
+					"height": 800
+				}
+			]
+		}, {
+			"title": "Asus",
+			"screens": [
+				{
+					"name": "Eee 1000",
+					"width": 1024,
+					"height": 600
+				}, {
+					"name": "Google Nexus 7",
+					"width": 1280,
+					"height": 800
+				}
+			]
+		}, {
+			"title": "Barnes And Noble",
+			"screens": [
+				{
+					"name": "Nook HD",
+					"width": 1440,
+					"height": 900
+				}, {
+					"name": "Nook HD+",
+					"width": 1920,
+					"height": 1280
+				}
+			]
+		}, {
+			"title": "Samsung",
+			"screens": [
+				{
+					"name": "Galaxy Tab 7.0",
+					"width": 1024,
+					"height": 600
+				}, {
+					"name": "Galaxy Tab 10.1",
+					"width": 1280,
+					"height": 800
+				}
+			]
+		}
+	],
+	"notebook": [
+		{
+			"title": "Apple",
+			"screens": [
+				{
+					"name": "11\" MacBook Air",
+					"width": 1366,
+					"height": 768
+				}, {
+					"name": "13\" MacBook Air",
+					"width": 1440,
+					"height": 900
+				}, {
+					"name": "15\" MacBook Pro",
+					"width": 1440,
+					"height": 900
+				}, {
+					"name": "15\" MacBook Pro Retina",
+					"width": 2880,
+					"height": 1800
+				}
+			]
+		}, {
+			"title": "Dell",
+			"screens": [
+				{
+					"name": "Alienware M14x",
+					"width": 1366,
+					"height": 768
+				}, {
+					"name": "Alienware M17x",
+					"width": 1920,
+					"height": 1080
+				}, {
+					"name": "Alienware M18x",
+					"width": 1920,
+					"height": 1080
+				}, {
+					"name": "Inspiron 17R SE",
+					"width": 1920,
+					"height": 1080
+				}
+			]
+		}, {
+			"title": "Toshiba",
+			"screens": [
+				{
+					"name": "Satellite P845-S4200",
+					"width": 1366,
+					"height": 768
+				}
+			]
+		}, {
+			"title": "Lenovo",
+			"screens": [
+				{
+					"name": "IdeaPad Yoga",
+					"width": 1600,
+					"height": 900
+				}, {
+					"name": "Ideapad Y580",
+					"width": 1920,
+					"height": 1080
+				}, {
+					"name": "ThinkPad X1 Carbon",
+					"width": 1600,
+					"height": 900
+				}
+			]
+		}
+	], 
+	"desktop": [
+		{
+			"title": "Apple",
+			"screens": [
+				{
+					"name": "iMac 21.5\"",
+					"width": 1920,
+					"height": 1080
+				}, {
+					"name": "iMac 27\"",
+					"width": 2560,
+					"height": 1440
+				}
+			]
+		}, {
+			"title": "Vizio",
+			"screens": [
+				{
+					"name": "24\" All-in-one",
+					"width": 1920,
+					"height": 1080
+				}, {
+					"name": "27\" All-in-one",
+					"width": 1920,
+					"height": 1080
+				}
+			]
+		}, {
+			"title": "System76",
+			"screens": [
+				{
+					"name": "Sable",
+					"width": 1920,
+					"height": 1080
+				}
+			]
+		}, {
+			"title": "Dell",
+			"screens": [
+				{
+					"name": "XPS One 27 Touch",
+					"width":  2560,
+					"height": 1440
+				}, {
+					"name": "XPS One 27 Touch",
+					"width":  1920,
+					"height": 1080
+				}
+			]
+		}
+	]
+}

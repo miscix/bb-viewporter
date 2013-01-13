@@ -23,235 +23,113 @@ html, body {
 html {
 	height: 100%;
 	body {
-		.fill-height(80px);
-		overflow-y: scroll;
-		&.prepare-fonts {
-			#last-font { 
-				display: none;
-			}
-			#prepare-fonts {
-				width: 100%;
-				.resize-layout {
-					.icon-resize-full { display: none !important; }
-					.icon-resize-small { display: inline !important; }
-				}
-			}
-		}
-		&.last-font {
-			#prepare-fonts { 
-				display: none;
-			}
-			#last-font {
-				width: 100%;
-				.resize-layout {
-					.icon-resize-full { display: none !important; }
-					.icon-resize-small { display: inline !important; }
-				}
-			}
-		}
+		.fill-height(60px);
+		// overflow-y: scroll;
 	}
 }
 
 #container {
 	height: 100%;
-	& > .row-fluid, #prepare-fonts, #last-font {
+	#wrapper {
+		// height: 100%;
+		// width: 100%; 
+		position: relative;
+		#view {
+			background: url('../img/grid.png') repeat;
+			position: relative;
+			height: 1450px;
+			width: 2560px;
+		}
+		#backdrop {
+			background: @grayDark;
+			.opacity(65);
+			width: 100%; 
+			height: 100%;
+			position: absolute;
+			z-index: 1000;
+			display: none;
+		}
+	}
+}
+
+#porter {
+	z-index: 1010;
+	position: relative;
+	.transition(opacity .15s linear);
+	border: 1px solid #FF0083;
+	background: @white;
+	width: 495px;
+	height: 320px;
+	#overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: transparent;
+		width: 100%;
 		height: 100%;
 	}
-	#prepare-fonts, #last-font {
+	iframe {
+		border: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&:hover {
+		z-index: 1030;
+	}
+}
+
+#dimensions {
+	padding: 6px 20px;
+	margin: 0 20px 0 0;
+	a {
+		padding: 4px 12px;
+		color: #DDD;
+		&:hover {
+			color: @white;
+			text-decoration: none;
+		}
+	}
+	input {
+		background: transparent;
+		height: 16px;
+		line-height: 16px;
+		color: white;
+		width: 40px;
+		color: @white;
 		margin: 0;
-		border: 1px solid @tableBorder;
-		position: relative;
-		.transition(all .1s linear);
-		.border-radius(2px);
-		& > header {
-			height: 35px;
-			padding: 9px;
-			margin-bottom: 0;
-			border-bottom: 1px solid #DDD;
-			background-color: @grayLighter;
-			overflow: hidden;
-			.nav {
-				margin: 0 4px;
-				li {
-					a {
-						margin: 5px;
-						text-decoration: none;
-						.icon-resize-small {
-							display: none;
-						}
-					}
-				}
-			}
+		border: none;
+		&#input-width {
+			text-align: right;
 		}
-		#last-glyphs, #fonts {
-			margin: 0;
-			padding: 8px;
-			list-style: none;
-			.fill-height(132px);
-			width: 100%;
-			// background: @pink;
-		}
-		& > footer {
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			.navbar {
-				margin-bottom: 0;
-				.navbar-inner {
-					.border-radius(0);
-					.progress {
-						margin-top: 8px;
-						margin-bottom: 8px;
-						.bar {
-							.transition(all .1s linear);
-							background: darken(@blueDm, 15%);
-						}
-					}
-				}
-			}
-		}
+	}
+	span {
+		// line-height: 48px;
+		color: @white;
 	}
 }
 
-#prepare-fonts {
-	
-
-	#fonts {
-		min-height: 7.2em;
-		margin: 8px; 
-		.font {
-			.border-radius(2px);
-			border: 1px solid #DDD;
-			margin: 0 0 .8em;
-			header {
-				margin: 8px 12px;
-				cursor: pointer;
-				.font-name {
-					font-size: 24px;
-					line-height: 1.3em;
-					color: @black;
-					font-weight: normal;
-					&:hover {
-						.transition(color .2s linear);
-						color: @blueDm;
-					}
-				}
-				.font-info {
-					padding-left: .2em;
-					padding-right: .2em;
-					color: @gray;
-				}
-				.font-glyphs {
-					color: @blueDm;
-				}
-			}
-			.glyphs {
-
-				margin: 4px 2px;
-				.glyph {
-					margin: 4px;
-					padding: 4px;
-					border: 1px solid @blueDm;
-					width: 48px;
-					height: 48px;
-					font-size: 36px;
-					line-height: 48px;
-					text-align: center;
-					display: inline-block;
-					.border-radius(2px);
-					&:hover {
-						border-color: @pink;
-						background: #efefef;
-					}
-					&.active {
-						border-color: @pink;
-						background: #eeeeee;
-					}
-				} 
-			}
-
-			&:hover {
-				background: #F7F7F7;
-			}
-		}
-	}
-
-	#upload-font {
-		.qq-uploader {
-			.qq-upload-drop-area {
-				border: 1px dotted #DDD;
-				background: #f7f7f7;
+#ruller {
+	position: absolute;
+	margin: 0;
+	list-style: none;
+	width: 2560px;
+	z-index: 1020;
+	li {
+		display: block;
+		width: 9px;
+		height: 6px;
+		border-left: 1px dotted #FF0083;
+		float: left;
+		&.r50 {
+			height: 12px;
+			span {
+				font-size: 10px;
+				width: 40px;
+				display: inline-block;
+				margin-left: -20px;
 				text-align: center;
-				padding: .2em;
-				float: right;
-			}
-			.qq-upload-button {
-				float: left;
-				margin-left: 0;
-				margin-top: 0; 
-			}
-			.qq-upload-list {
-				display: none;
-			}
-		}
-	}
-}
-
-#last-font {
-	header {
-		.nav {
-			li {
-				input {
-					background: transparent;
-					border-color: transparent;
-					font-size: 1.8em;
-					color: @grayDark;
-					&:active, &:focus {
-						outline: none;
-						.box-shadow(none);
-					}
-				}
-			}
-		}
-	}
-	#last-glyphs {
-		list-style: none;
-		.glyph {
-			border: 1px solid @blueDm;
-			display: inline-block;
-			.border-radius(2px);
-			margin: 4px;
-			header, footer {
-				font-size: 11px;
-				color: @white;
-				background: @blueDm;
-				padding: 2px 4px;
-				a {
-					color: @grayLighter;
-					&:hover, &:active {
-						color: @white;
-						text-decoration: none;
-					}
-				}
-				.glyph-name {
-					display: block;
-					text-align: center;
-					outline: none;
-					height: 25px;
-					width: 56px;
-					overflow: hidden;
-				}
-			}
-			.glyph-icon {
-				width: 48px;
-				margin: 4px;
-				padding: 4px;
-				text-align: center;
-				display: block;
-				height: 48px;
-				font-size: 36px;
-				line-height: 48px;
-			}
+				margin-top: 5px;
+			} 
 		}
 	}
 }
