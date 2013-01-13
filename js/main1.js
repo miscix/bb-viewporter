@@ -3,11 +3,11 @@ require.config({
 		// Core Libraries
 		'jquery'	: 'libs/jquery',
 		'underscore': 'libs/lodash',
-		// 'backbone'	: 'libs/backbone',
+		'backbone'	: 'libs/backbone',
 		// Plugins
 		// 'qq'		: 'plugins/jquery.qq',
-		// 'scroll'	: 'plugins/jquery.slimscroll',
-		// 'plugins'	: 'plugins/misc',
+		'scroll'	: 'plugins/jquery.slimscroll',
+		'plugins'	: 'plugins/misc',
 		'jqueryui'	: 'plugins/jquery.ui',
 		'bootstrap'	: 'plugins/bootstrap',
 		// Directory routing
@@ -15,7 +15,7 @@ require.config({
 	},
 	shim: {
 		// Misc jQuery plugins
-		// 'plugins': ['jquery'],
+		'plugins': ['jquery'],
 		// Twitter Bootstrap js files
 		'bootstrap': ['jquery'],
 		// Valums uploader plugin
@@ -26,19 +26,19 @@ require.config({
 		// jQuery UI
 		'jqueryui': ['jquery'],
 		// SlimScroll plugin
-		// 'scroll': ['jquery', 'jqueryui'],
+		'scroll': ['jquery', 'jqueryui'],
 
-		// 'backbone': {
-		// 		'deps': ['underscore', 'jquery'],
-		// 		'exports': 'Backbone' 
-		// }
+		'backbone': {
+				'deps': ['underscore', 'jquery'],
+				'exports': 'Backbone' 
+		}
 	}
 });
 
 require([
 	'app',
-	'bootstrap',
-	'jqueryui'
+	'plugins',
+	'bootstrap'
 ], function(App) {
 	window.app = App();
 

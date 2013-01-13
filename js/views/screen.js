@@ -56,19 +56,7 @@ define([
 				}
 			},
 			initialize: function(){
-				this.$el = $(document);
 
-				this.$url = this.$('#input-url');
-
-				this.$inputHeight = this.$('#input-height');
-				this.$inputWidth = this.$('#input-width');
-
-				this.$porter = this.$('#porter');
-
-				this.$overlay = this.$('#overlay');
-				this.$backdrop = this.$('#backdrop');
-
-				this.iframe = this.$porter.find('iframe').get(0);
 			},
 			render: function(devices){
 				var devicesMarkup = this.devicesTpl(devices);
