@@ -3,10 +3,9 @@ define([
 	'underscore',
 
 	'text!templates/devices.html',
-	'text!templates/ruller.html',
 
 	'json!data/devices.json'
-], function($, _, tplDevices, tplRuller, devices){
+], function($, _, tplDevices, devices){
 
 	var $inputUrl = $('#input-url'),
 
@@ -23,19 +22,17 @@ define([
 			var width = parseInt(width, 10),
 				height = parseInt(height, 10);
 
-			$porter.animate({
+			$porter.css({
 				width: width + 15,
-				height: height + 15
-			}, 'normal');
+				height: height
+			});
+
+			app.changed(width, height);
 		},
 		activate = function(active){
-			if (active) {
-				$overlay.hide();
-				$backdrop.show();
-			} else {
-				$backdrop.hide();
-				$overlay.show();
-			}
+			var fn = active ? 'addClass' : 'removeClass';
+
+			$('#view')[fn]('active');
 		};
 
 	var App = function(){
@@ -48,9 +45,6 @@ define([
 		self.render = function(){
 			var devicesMarkup = _.template(tplDevices, devices);
 			$('#devices').html(devicesMarkup);
-
-			var rullerMarkup = _.template(tplRuller);
-			$('#ruller').html(rullerMarkup);
 
 			$porter.resizable({ 
 				handles: 'e, s, se',
@@ -103,7 +97,6 @@ define([
 				var width = $inputWidth.val(),
 					height = $inputHeight.val();
 
-				self.changed(height, width);
 				resize(height, width);
 			});
 

@@ -28,10 +28,6 @@
 					"name": "Bold Touch 9900",
 					"width": 480,
 					"height": 640
-				}, {
-					"name": "Curve",
-					"width": 360,
-					"height": 480
 				}
 			]
 		}, {
@@ -132,7 +128,7 @@
 				}
 			]
 		}, {
-			"title": "Barnes And Noble",
+			"title": "Barnes & Noble",
 			"screens": [
 				{
 					"name": "Nook HD",
