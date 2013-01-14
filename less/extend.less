@@ -5,7 +5,7 @@
 @blueDm		: #446CB3;
 @tiffanyDm	: #5BC4BE;
 
-@sansFontFamily:        'Open Sans',sans-serif;
+@sansFontFamily:        'Varela Round', 'Open Sans', sans-serif;
 
 @baseLineHeight:        25px;
 
@@ -43,15 +43,20 @@
 	height: 22px;
 }
 
+.navbar .nav > li:first-child {
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
 // Links
 .navbar .nav > li > a {
+	// border-right: 1px solid rgba(255, 255, 255, 0.11);
 	border-right: 1px solid rgba(0, 0, 0, 0.1);
-	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	border-left: 1px solid rgba(255, 255, 255, 0.11);
 	.box-shadow(1px 0 0 rgba(255, 255, 255, 0.11));
 	text-shadow: none;
  	.transition(all .15s linear);
  	padding-left: 18px;
  	padding-right: 18px;
+
 	&:hover {
 		text-shadow: none;
 	}

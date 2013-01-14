@@ -22,7 +22,7 @@ define([
 			var width = parseInt(width, 10),
 				height = parseInt(height, 10);
 
-			$porter.css({
+			$porter.animate({
 				width: width + 15,
 				height: height
 			}, 'normal');
@@ -59,8 +59,10 @@ define([
 			$porter
 				// change input values on manual resize
 				.on('resize', function(e, ui){
-					var size = ui.size;
-					self.changed(size.width, size.height);
+					var width = parseInt(ui.size.width, 10) - 15,
+						height = parseInt(ui.size.height);
+
+					self.changed(width, height);
 				})
 				// display overlay to not lag on iframe hover
 				.on('resizestart', function(e, ui){
@@ -104,6 +106,8 @@ define([
 				e.preventDefault();
 
 				iframe.src = $inputUrl.val();
+				
+				// $inputUrl.blur();
 			});
 				
 			$('#dimensions input').on('change', function(e){

@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round'), local('VarelaRound-Regular'), url(http://themes.googleusercontent.com/static/fonts/varelaround/v3/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
 /*  Font Awesome 3.0
     the iconic font designed for use with Twitter Bootstrap
     -------------------------------------------------------
@@ -32,6 +45,7 @@
     url('@{FontPath}/dm.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
@@ -50,7 +64,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-.icon-desktop:before, .icon-laptop:before, .icon-tablet:before, .icon-mobile-phone:before, .icon-refresh:before, .icon-retweet:before, .icon-designmodo:before, .icon-menu:before, .icon-spin:before, .icon-eye:before {
+.icon-desktop:before, .icon-laptop:before, .icon-tablet:before, .icon-mobile-phone:before, .icon-refresh:before, .icon-retweet:before, .icon-designmodo:before, .icon-menu:before, .icon-spin:before, .icon-eye:before, .icon-resize:before {
   font-family: 'dm';
   speak: none;
   font-style: normal;
@@ -87,4 +101,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-eye:before {
   content: "\e009";
+}
+.icon-resize:before {
+  content: "\e00a";
 }
