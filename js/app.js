@@ -25,7 +25,7 @@ define([
 			$porter.css({
 				width: width + 15,
 				height: height
-			});
+			}, 'normal');
 
 			app.changed(width, height);
 		},

@@ -1,0 +1,90 @@
+/*  Font Awesome 3.0
+    the iconic font designed for use with Twitter Bootstrap
+    -------------------------------------------------------
+    The full suite of pictographic icons, examples, and documentation
+    can be found at: http://fortawesome.github.com/Font-Awesome/
+
+    License
+    -------------------------------------------------------
+    • The Font Awesome font is licensed under the SIL Open Font License - http://scripts.sil.org/OFL
+    • Font Awesome CSS, LESS, and SASS files are licensed under the MIT License -
+      http://opensource.org/licenses/mit-license.html
+    • The Font Awesome pictograms are licensed under the CC BY 3.0 License - http://creativecommons.org/licenses/by/3.0/
+    • Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+      "Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome"
+
+    Contact
+    -------------------------------------------------------
+    Email: dave@davegandy.com
+    Twitter: http://twitter.com/fortaweso_me
+    Work: Lead Product Designer @ http://kyruus.com
+
+    */
+
+@FontPath:   "../font";
+
+@font-face {
+  font-family: 'dm';
+  src:url('@{FontPath}/dm.eot');
+  src:url('@{FontPath}/dm.eot?#iefix') format('embedded-opentype'),
+    url('@{FontPath}/dm.woff') format('woff'),
+    url('@{FontPath}/dm.svg#dm') format('svg'),
+    url('@{FontPath}/dm.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'dm';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-desktop:before, .icon-laptop:before, .icon-tablet:before, .icon-mobile-phone:before, .icon-refresh:before, .icon-retweet:before, .icon-designmodo:before, .icon-menu:before, .icon-spin:before, .icon-eye:before {
+  font-family: 'dm';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-desktop:before {
+  content: "\e000";
+}
+.icon-laptop:before {
+  content: "\e001";
+}
+.icon-tablet:before {
+  content: "\e002";
+}
+.icon-mobile-phone:before {
+  content: "\e003";
+}
+.icon-refresh:before {
+  content: "\e004";
+}
+.icon-retweet:before {
+  content: "\e005";
+}
+.icon-designmodo:before {
+  content: "\e006";
+}
+.icon-menu:before {
+  content: "\e007";
+}
+.icon-spin:before {
+  content: "\e008";
+}
+.icon-eye:before {
+  content: "\e009";
+}
